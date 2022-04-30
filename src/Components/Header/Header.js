@@ -32,7 +32,7 @@ const Header = () => {
         <div className="header-body">
           <div className="header-body__container ">
             <Menu />
-            <div className="header-content container">
+            <div className="header-content">
               <nav className="header-content__nav">
                 <ul className="header-content__nav-menu">
                   <li>

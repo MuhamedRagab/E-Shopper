@@ -65,6 +65,7 @@
 .header-body__container {
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
+  gap: 1rem;
 }
 
 /* Menu */
