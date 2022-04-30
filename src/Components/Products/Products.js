@@ -7,6 +7,8 @@ import cat5 from "../../assets/img/cat-5.jpg";
 import cat6 from "../../assets/img/cat-6.jpg";
 import Offer from "../Offer/Offer";
 import "./products.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const products = [
   {
@@ -53,16 +55,22 @@ const products = [
 ];
 
 const Products = () => {
+  AOS.init({ duration: 2000, delay: 500 });
   return (
     <section>
       <div className="container ">
-        <article className=" products__container">
+        <article data-aos={"fade-left"} className=" products__container">
           {products.map((product) => {
             return (
               <figure key={product.id} className="product-card">
                 <figcaption>{product.quantity}</figcaption>
                 <div className="product-card__image">
-                  <img src={product.image} alt="product" loading="lazy" />
+                  <img
+                    data-aos={"fade-left"}
+                    src={product.image}
+                    alt="product"
+                    loading="lazy"
+                  />
                 </div>
                 <h3>{product.name}</h3>
               </figure>
