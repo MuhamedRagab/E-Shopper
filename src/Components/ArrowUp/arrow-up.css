@@ -1,0 +1,29 @@
+.arrow-up {
+  background: var(--color-dark-pink);
+  padding: 0.6rem 0.8rem;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  animation: jump 2.5s linear infinite;
+}
+
+.arrow-up:hover {
+  color: #fff;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

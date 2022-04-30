@@ -1,0 +1,70 @@
+.offer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.offer__container > .offer-card {
+  height: 300px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 500;
+  padding-top: 2rem;
+  background: var(--bg-light-blue);
+  overflow: hidden;
+}
+
+.offer__container > .offer-card > img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.offer__container > .offer-card > div {
+  padding-inline: 2rem;
+}
+
+.offer__container > .offer-card:nth-child(1) > div {
+  text-align: right;
+}
+
+.offer__container > .offer-card:nth-child(2) > div {
+  text-align: left;
+}
+
+.offer__container > .offer-card > div > figcaption {
+  font-size: 1.3rem;
+  color: var(--color-light-pink);
+}
+
+.offer__container > .offer-card > div > h3 {
+  margin-block: 1.5rem;
+  font-size: 2.1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.offer__container > .offer-card > div > button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  color: var(--color-light-pink);
+  border: 1px solid var(--color-light-pink);
+  background: transparent;
+  transition: var(--transition);
+  font-weight: 400;
+}
+
+.offer__container > .offer-card > div > button:hover {
+  color: var(--color-text);
+  border-color: transparent;
+  background: var(--color-light-pink);
+}
+
+@media screen and (max-width: 992px) {
+  .offer__container {
+    grid-template-columns: 1fr;
+  }
+}

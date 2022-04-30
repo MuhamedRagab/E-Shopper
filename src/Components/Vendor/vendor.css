@@ -1,0 +1,9 @@
+.vendor {
+  padding: 2rem 0;
+}
+
+.vendor__container {
+  margin-block: 5rem;
+  height: 200px;
+  padding: 1rem 1.5rem;
+}

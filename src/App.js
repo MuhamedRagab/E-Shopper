@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Nav from "./Components/Nav/Nav";
+import Header from "./Components/Header/Header";
+import Products from "./Components/Products/Products";
+import TrandyProducts from "./Components/TrandyProducts/TrandyProducts";
+import StayUpdated from "./Components/StayUpdated/StayUpdated";
+import Vendor from "./Components/Vendor/Vendor";
+import Footer from "./Components/Footer/Footer";
+import ArrowUp from "./Components/ArrowUp/ArrowUp";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Header />
+      <Products />
+      <TrandyProducts title="Trandy Products" />
+      <StayUpdated />
+      <TrandyProducts title="Just Arrived" />
+      <Vendor />
+      <Footer />
+      <ArrowUp />
     </div>
   );
 }
