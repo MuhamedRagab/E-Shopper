@@ -8,6 +8,7 @@
   border-radius: 50%;
   transition: var(--transition);
   animation: jump 2.5s linear infinite;
+  z-index: 20;
 }
 
 .arrow-up:hover {

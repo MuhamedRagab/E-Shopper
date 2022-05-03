@@ -71,6 +71,20 @@ const trandyProducts = [
   },
 ];
 const TrandyProduct = ({ title }) => {
+  const checkPurchasesStorage = () => {
+    if (localStorage.getItem("purchases")) {
+      return localStorage.getItem("purchases");
+    } else {
+      localStorage.setItem("purchases", 0);
+      return localStorage.getItem("purchases");
+    }
+  };
+  checkPurchasesStorage();
+
+  const addToCart = () => {
+    localStorage.purchases++;
+  };
+
   AOS.init({ duration: 2000, delay: 500 });
 
   return (
@@ -102,7 +116,7 @@ const TrandyProduct = ({ title }) => {
                   <button>
                     <FaEye className=" icon" /> View Details
                   </button>
-                  <button>
+                  <button onClick={() => addToCart()}>
                     <FaShoppingCart className=" icon" /> Add To Cart
                   </button>
                 </div>

@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 
 const HeaderTop = () => {
+  let [purchases, setPurchases] = useState(localStorage.getItem("purchases"));
+  setInterval(() => {
+    setPurchases(JSON.parse(localStorage.getItem("purchases")));
+  }, 1000);
+
   return (
     <section className="header-top">
       <div className="header-top__logo">
@@ -22,7 +27,8 @@ const HeaderTop = () => {
           <FaHeart className="icon" /> <span>0</span>
         </button>
         <button className="btn">
-          <FaShoppingCart className="icon" /> <span>0</span>
+          <FaShoppingCart className="icon" />
+          <span>{purchases || 0}</span>
         </button>
       </div>
     </section>

@@ -81,6 +81,5 @@
 
   .offer__container > .offer-card:nth-child(2) > img {
     margin-bottom: -2rem;
-    /* width: 100%; */
   }
 }
