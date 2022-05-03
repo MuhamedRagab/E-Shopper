@@ -55,29 +55,27 @@ const products = [
 ];
 
 const Products = () => {
-  AOS.init({ duration: 2000, delay: 500 });
+  AOS.init({ duration: 2000 });
   return (
     <section>
       <div className="container ">
-        <article data-aos={"fade-left"} className=" products__container">
+        <article className=" products__container">
           {products.map((product) => {
             return (
-              <figure key={product.id} className="product-card">
+              <figure
+                data-aos={"zoom-in"}
+                key={product.id}
+                className="product-card"
+              >
                 <figcaption>{product.quantity}</figcaption>
                 <div className="product-card__image">
-                  <img
-                    data-aos={"fade-left"}
-                    src={product.image}
-                    alt="product"
-                    loading="lazy"
-                  />
+                  <img src={product.image} alt="product" loading="lazy" />
                 </div>
                 <h3>{product.name}</h3>
               </figure>
             );
           })}
         </article>
-        <Offer />
       </div>
     </section>
   );

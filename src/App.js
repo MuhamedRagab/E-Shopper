@@ -2,6 +2,7 @@ import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import Header from "./Components/Header/Header";
 import Products from "./Components/Products/Products";
+import Offer from "./Components/Offer/Offer";
 import TrandyProducts from "./Components/TrandyProducts/TrandyProducts";
 import StayUpdated from "./Components/StayUpdated/StayUpdated";
 import Vendor from "./Components/Vendor/Vendor";
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Header />
       <Products />
+      <Offer />
       <TrandyProducts title="Trandy Products" />
       <StayUpdated />
       <TrandyProducts title="Just Arrived" />

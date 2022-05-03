@@ -10,7 +10,7 @@ const HeaderTop = () => {
   return (
     <section className="header-top">
       <div className="header-top__logo">
-        <a href="#" className="logo">
+        <a href="# " className="logo">
           <span>E</span> Shopper
         </a>
       </div>
