@@ -66,7 +66,8 @@
     width: 85%;
   }
 
-  /* .stay__form {
+  .stay__form {
+    width: 85%;
     flex-direction: column;
-  } */
+  }
 }
