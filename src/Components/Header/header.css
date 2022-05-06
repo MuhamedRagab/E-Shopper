@@ -20,11 +20,11 @@
 }
 
 .header-top__searchForm {
+  height: 100%;
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .header-top__searchForm > input {
@@ -50,9 +50,17 @@
   .header-top > .header-top__logo {
     display: none;
   }
+}
+
+@media screen and (max-width: 460px) {
+  .header-top {
+    justify-content: center;
+    flex-direction: column;
+  }
 
   .header-top__searchForm {
-    width: 40%;
+    width: 90%;
+    margin-bottom: 1rem;
   }
 }
 

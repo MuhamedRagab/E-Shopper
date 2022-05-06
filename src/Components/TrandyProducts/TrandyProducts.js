@@ -9,8 +9,6 @@ import product7 from "../../assets/img/product-7.jpg";
 import product8 from "../../assets/img/product-8.jpg";
 import { FaEye, FaShoppingCart } from "react-icons/fa";
 import "./trandyProducts.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const trandyProducts = [
   {
@@ -85,8 +83,6 @@ const TrandyProduct = ({ title }) => {
     localStorage.purchases++;
   };
 
-  AOS.init({ duration: 2000, delay: 500 });
-
   return (
     <section>
       <div className="container trandy__container">
@@ -95,12 +91,7 @@ const TrandyProduct = ({ title }) => {
         <article className="trandy__cards">
           {trandyProducts.map((product) => {
             return (
-              <figure
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-                className="trandy-card"
-                key={product.id}
-              >
+              <figure className="trandy-card" key={product.id}>
                 <div className="trandy-card__image">
                   <img src={product.image} alt={product.name} loading="lazy" />
                 </div>

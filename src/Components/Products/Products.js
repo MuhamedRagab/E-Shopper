@@ -5,10 +5,7 @@ import cat3 from "../../assets/img/cat-3.jpg";
 import cat4 from "../../assets/img/cat-4.jpg";
 import cat5 from "../../assets/img/cat-5.jpg";
 import cat6 from "../../assets/img/cat-6.jpg";
-import Offer from "../Offer/Offer";
 import "./products.css";
-import "aos/dist/aos.css";
-import AOS from "aos";
 
 const products = [
   {
@@ -55,18 +52,13 @@ const products = [
 ];
 
 const Products = () => {
-  AOS.init({ duration: 2000 });
   return (
     <section>
       <div className="container ">
         <article className=" products__container">
           {products.map((product) => {
             return (
-              <figure
-                data-aos={"zoom-in"}
-                key={product.id}
-                className="product-card"
-              >
+              <figure key={product.id} className="product-card">
                 <figcaption>{product.quantity}</figcaption>
                 <div className="product-card__image">
                   <img src={product.image} alt="product" loading="lazy" />
